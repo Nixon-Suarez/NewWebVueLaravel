@@ -26,7 +26,7 @@ class UserController extends Controller
                 return response()->json([
                     'code' => 201,
                     'data' => $user,
-                    'taken' => $user->createToken('api-key')->plainTextToken
+                    'token' => $user->createToken('api-key')->plainTextToken
                 ], 201);
             }
         }catch(\Exception $e){
@@ -51,7 +51,7 @@ class UserController extends Controller
                     return response()->json([
                         'code' => 200,
                         'data' => $user,
-                        'taken' => $user->createToken('api-key')->plainTextToken
+                        'token' => $user->createToken('api-key')->plainTextToken
                     ], 200);
                 }else{
                     return response()->json([

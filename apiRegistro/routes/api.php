@@ -18,15 +18,15 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('curso/insert', [CoursesController::class, 'insert']);
     Route::put('curso/update/{id}', [CoursesController::class, 'update']);
     Route::delete('curso/delete/{id}', [CoursesController::class, 'delete']);
-    Route::get ('curso/find/{id}', [CoursesController::class, 'find']);
+    Route::get('curso/find/{id}', [CoursesController::class, 'find']);
     // rutas para estudiante
     Route::get('student/select', [StudentController::class, 'select']);
     Route::post('student/insert', [StudentController::class, 'insert']);
     Route::put('student/update/{id}', [StudentController::class, 'update']);
     Route::delete('student/delete/{id}', [StudentController::class, 'delete']);
-    Route::get ('student/find/{id}', [StudentController::class, 'find']);
+    Route::get('student/find/{id}', [StudentController::class, 'find']);
     // rutas para inscripcion
 });
-    // rutas para user
-    Route::post('user/register', [UserController::class, 'registrar']);
-    Route::post('user/login', [UserController::class, 'login']);
+// rutas para user
+Route::post('user/register', [UserController::class, 'registrar']);
+Route::post('user/login', [UserController::class, 'login']);
